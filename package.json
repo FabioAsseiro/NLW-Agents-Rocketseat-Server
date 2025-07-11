@@ -6,14 +6,16 @@
   "scripts": {
     "start": "node --env-file .env --experimental-strip-types --no-warnings src/server.ts",
     "dev": "node --env-file .env --experimental-strip-types --no-warnings --watch src/server.ts",
-    "db:seed": "node --env-file .env --experimental-strip-types --no-warnings src/db/seed.ts"
+    "db:seed": "node --env-file .env --experimental-strip-types --no-warnings src/db/seed.ts",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@biomejs/biome": "2.0.6",
+    "@biomejs/biome": "2.1.1",
     "@types/node": "^24.0.13",
     "drizzle-kit": "^0.31.4",
     "drizzle-seed": "^0.3.1",
@@ -26,6 +28,6 @@
     "fastify": "^5.4.0",
     "fastify-type-provider-zod": "^5.0.2",
     "postgres": "^3.4.7",
-    "zod": "^4.0.3"
+    "zod": "^4.0.5"
   }
 }
